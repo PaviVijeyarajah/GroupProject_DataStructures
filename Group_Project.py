@@ -31,9 +31,8 @@ def dijikstra(graph,start):
                 heapq.heappush(queue, (distance, neighbor)) #Push updated distance and neighbor in queue
     return distances
 
-
+#Function calls
 graph=file("charging_station.txt")
-
 shortest_paths = dijikstra(graph, "A")
 
 #Dijikstra algorithm UI
