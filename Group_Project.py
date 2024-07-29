@@ -24,11 +24,11 @@ def dijikstra(graph,start):
 
     while queue: #priority queue while loop that stops when queue is empty
         current_distance, current_node = heapq.heappop(queue) #pops the node with the smallest distance
-        for neighbor, weight in graph[current_node]: 
+        for neighbour, weight in graph[current_node]: 
             distance = current_distance + weight #Calculate the distance of neighbours
-            if distance < distances[neighbor]: #Check for shorter path
-                distances[neighbor] = distance #Update shortest distance
-                heapq.heappush(queue, (distance, neighbor)) #Push updated distance and neighbor in queue
+            if distance < distances[neighbour]: #Check for shorter path
+                distances[neighbour] = distance #Update shortest distance
+                heapq.heappush(queue, (distance, neighbour)) #Push updated distance and neighbour in queue
     return distances
 
 #Function calls
